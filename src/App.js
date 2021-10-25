@@ -1,9 +1,21 @@
-function App() {
+import { Route } from 'react-router-dom';
+import Products from './components/Products';
+import Welcome from './components/Welcome';
+
+const App = () => {
   return (
     <div>
-      <h2>Test</h2>
+      <Route path="/welcome">
+        <Welcome />
+      </Route>
+      <Route path="/products">
+        <Products />
+      </Route>
     </div>
   );
-}
+};
 
 export default App;
+
+// our-domain.com/ => Component A
+// our-domain.com/products => Component B
